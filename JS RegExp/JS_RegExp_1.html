@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript String Methods</h2>
+
+    <p>(Jongin Park)Search a string for "W3Schools", and display the position of the match: </p>
+    <p id="demo1"></p>
+
+    <p>and Search a string for "w3Schools", and display the position of the match:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var str = "Visit W3Schools!";
+        var n = str.search("W3Schools");
+        var m = str.search(/w3Schools/i);
+        document.getElementById("demo1").innerHTML = n;
+        document.getElementById("demo2").innerHTML = m;
+    </script>
+
+</body>
+
+</html>

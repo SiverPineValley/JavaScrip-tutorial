@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Click the button to do a global search for at least one "o" in a string.</p>
+
+    <button onclick="myFunction1()">Try it</button>
+
+    <p id="demo1"></p>
+
+    <p>Click the button to do a global search for an "l", followed by zero or more "o" characters.</p>
+
+    <button onclick="myFunction2()">Try it</button>
+
+    <p id="demo2"></p>
+
+    <p>(Jongin Park) Click the button to do a global search for a "1", followed by zero or one "0" characters.</p>
+
+    <button onclick="myFunction3()">Try it</button>
+
+    <p id="demo3"></p>
+
+    <script>
+        function myFunction1() {
+            var str = "Hellooo World! Hello W3Schools!";
+            var patt1 = /o+/g;
+            var result = str.match(patt1);
+            document.getElementById("demo1").innerHTML = result;
+        }
+
+        function myFunction2() {
+            var str = "Hellooo World! Hello W3Schools!";
+            var patt1 = /lo*/g;
+            var result = str.match(patt1);
+            document.getElementById("demo2").innerHTML = result;
+        }
+
+        function myFunction3() {
+            var str = "1, 100 or 1000?";
+            var patt1 = /10?/g;
+            var result = str.match(patt1);
+            document.getElementById("demo3").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>
