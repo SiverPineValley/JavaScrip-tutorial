@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript <b>this</b> Keyword</h2>
+
+    <h3>Jongin Park</h3>
+
+    <p>In this example, <b>this</b> refers to the window Object:</p>
+
+    <p id="demo1"></p>
+
+    <p>In this example, <b>this</b> refers to the window Object:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var x = this;
+        document.getElementById("demo1").innerHTML = x;
+
+        "use strict";
+        var y = this;
+        document.getElementById("demo2").innerHTML = y;
+    </script>
+
+</body>
+
+</html>

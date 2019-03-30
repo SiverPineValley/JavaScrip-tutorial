@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>The JavaScript <b>this</b> Keyword</h2>
+    <h3>Jongin Park</h3>
+    <p>In this example, <b>this</b> represents the person object that "owns" the fullName method.</p>
+
+    <p id="demo1"></p>
+
+    <p>In this example, <b>this</b> represents the <b>person</b> object.</p>
+    <p>Because the person object "owns" the fullName method.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        // Create an object:
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            myFunction: function() {
+                return this;
+            }
+        };
+
+        // Display data from the object:
+        document.getElementById("demo1").innerHTML = person.myFunction();
+
+        // Create an object:
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Display data from the object:
+        document.getElementById("demo2").innerHTML = person.fullName();
+    </script>
+
+</body>
+
+</html>
