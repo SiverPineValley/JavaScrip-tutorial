@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>(Jongin Park) With "use strict":</h2>
+    <h3>Using a variable/object without declaring it, is not allowed.</h3>
+    <h3>Deleting a variable (or object, function) is not allowed.</h3>
+    <h3>Duplicating a parameter name is not allowed.</h3>
+    <h3>Octal numeric literals are not allowed.</h3>
+    <h3>Octal escape characters are not allowed.</h3>
+    <h3>Writing to a read/get-only property is not allowed.</h3>
+    <h3>Deleting an udeletable property is not allowed.</h3>
+    <h3>The string "eval" cannot be used as a variable.</h3>
+    <h3>The string "arguments" cannot be used as a variable.</h3>
+    <h3>The with statement is not allowed.</h3>
+    <h3>For security reasons, eval() is not allowed to create variables in the scope from which it was called.</h3>
+    <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+    <script>
+        "use strict";
+        x = 3.14; // This will cause an error (x is not defined).
+
+        y = {
+            p1: 10,
+            p2: 20
+        }; // This will cause an error (y is not defined).
+
+        var a = 3.14;
+
+        delete a; // This will cause an error
+
+        function b(p1, p2) {};
+
+        delete b; // This will cause an error
+
+        function c(p1, p1) {}; // This will cause an error
+
+        var d = 010; // This will cause an error
+
+        var e = "\010"; // This will cause an error
+
+        var obj = {};
+        Object.defineProperty(obj, "f", {
+            value: 0,
+            writable: false
+        });
+        obj.f = 3.14; // This will cause an error
+
+        var obj2 = {get g() {
+                return 0
+            }
+        };
+        obj.g = 3.14; // This will cause an error
+
+        delete Object.prototype; // This will cause an error
+
+        var eval = 3.14; // This will cause an error
+
+        var arguments = 3.14; // This will cause an error 
+
+        with(Math) {
+            x = cos(2)
+        }; // This will cause an error 
+
+        eval("var x = 2");
+        alert(x); // This will cause an error
+    </script>
+
+</body>
+
+</html>

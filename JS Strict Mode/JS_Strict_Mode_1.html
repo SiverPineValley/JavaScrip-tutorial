@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>(Jongin Park) With "use strict":</h2>
+    <h3>Using a variable without declaring it, is not allowed.</h3>
+
+    <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+    <h2>Global "use strict" declaration.</h2>
+
+    <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+    <p>"use strict" in a function will only cause errors in that function.</p>
+
+    <p>Activate debugging in your browser (F12) to see the error report.</p>
+
+    <script>
+        "use strict";
+        x = 3.14; // This will cause an error (x is not defined).
+        myFunction();
+
+        function myFunction() {
+            y = 3.14; // This will cause an error (y is not defined)
+        }
+
+        a = 3.14; // This will not cause an error.
+        myFunction();
+
+        function myFunction() {
+            "use strict";
+            b = 3.14; // This will cause an error (y is not defined).
+        }
+    </script>
+
+</body>
+
+</html>
